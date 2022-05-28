@@ -27,7 +27,7 @@ class PureChat extends PluginBase
           888  888    "Y8888P"        888  888        888        "Y8888P"   "Y8888P"
     */
 
-    const MAIN_PREFIX = "\x5b\x50\x75\x72\x65\x43\x68\x61\x74\x3a\x36\x34\x46\x46\x30\x30\x5d";
+    const MAIN_PREFIX = "§l§3»§r ";
 
     private Config $config;
 
@@ -106,14 +106,14 @@ class PureChat extends PluginBase
 
                 if(!isset($args[0]))
                 {
-                    $sender->sendMessage(TextFormat::GREEN . self::MAIN_PREFIX . " Usage: /setprefix <prefix>");
+                    $sender->sendMessage(TextFormat::GREEN . self::MAIN_PREFIX . " §cIncorrect usage!");
                     return true;
                 }
 
                 $WorldName = $this->config->get("enable-multiworld-chat") ? $sender->getWorld()->getDisplayName() : null;
                 $prefix = str_replace("{BLANK}", ' ', implode('', $args));
                 $this->setPrefix($prefix, $sender, $WorldName);
-                $sender->sendMessage(TextFormat::GREEN . self::MAIN_PREFIX . " You set your prefix to " . $prefix . ".");
+                $sender->sendMessage(TextFormat::GREEN . self::MAIN_PREFIX . " §eYour hub title was set to:§b " . $prefix . ".");
                 break;
 
             case "setsuffix":
@@ -133,7 +133,7 @@ class PureChat extends PluginBase
                 $WorldName = $this->config->get("enable-multiworld-chat") ? $sender->getWorld()->getDisplayName() : null;
                 $suffix = str_replace("{BLANK}", ' ', implode('', $args));
                 $this->setSuffix($suffix, $sender, $WorldName);
-                $sender->sendMessage(TextFormat::GREEN . self::MAIN_PREFIX . " You set your suffix to " . $suffix . ".");
+                $sender->sendMessage(TextFormat::GREEN . self::MAIN_PREFIX . " §eYour Terratitle was set to:§b " . $suffix . ".");
                 break;
         }
 
