@@ -15,10 +15,10 @@ commands:
     permission: pchat.command.setnametag
   setprefix:
     description: "Allows you to set your PureChat prefix"
-    permission: pchat.command.setprefix
+    default: true
   setsuffix:
     description: "Allows you to set your PureChat suffix"
-    permission: pchat.command.setsuffix	
+    default: true
 permissions:
   pchat:
     default: op
