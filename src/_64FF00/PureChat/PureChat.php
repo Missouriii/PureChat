@@ -27,7 +27,7 @@ class PureChat extends PluginBase
           888  888    "Y8888P"        888  888        888        "Y8888P"   "Y8888P"
     */
 
-    const MAIN_PREFIX = "§l§3»§r ";
+    const MAIN_PREFIX = "§l§3»§r";
 
     private Config $config;
 
